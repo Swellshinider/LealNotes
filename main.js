@@ -7,7 +7,9 @@ function createWindow() {
     height: 600,
     title: "LealNotes",
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: false,
+      contextIsolation: true,
     }
   });
 
